@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "gui-seek": {
+      "hosting": {
+        "webapp": [
+          "gui-seek"
+        ]
+      }
+    }
+  }
+}

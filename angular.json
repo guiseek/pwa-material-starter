@@ -91,6 +91,10 @@
             "passWithNoTests": true,
             "setupFile": "apps/webapp/src/test-setup.ts"
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -118,6 +122,188 @@
             "tsConfig": ["apps/webapp-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/webapp-e2e/**"]
           }
+        }
+      }
+    },
+    "core-entities": {
+      "root": "libs/core/entities",
+      "sourceRoot": "libs/core/entities/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/entities/tsconfig.lib.json",
+              "libs/core/entities/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/entities/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/entities/jest.config.js",
+            "tsConfig": "libs/core/entities/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "auth": {
+      "projectType": "library",
+      "root": "libs/auth",
+      "sourceRoot": "libs/auth/src",
+      "prefix": "orgui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/auth/tsconfig.lib.json",
+              "libs/auth/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/auth/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/auth/jest.config.js",
+            "tsConfig": "libs/auth/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/auth/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-services": {
+      "projectType": "library",
+      "root": "libs/shared/services",
+      "sourceRoot": "libs/shared/services/src",
+      "prefix": "orgui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/services/tsconfig.lib.json",
+              "libs/shared/services/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/services/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/services/jest.config.js",
+            "tsConfig": "libs/shared/services/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/services/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "admin-dashboard": {
+      "projectType": "library",
+      "root": "libs/admin/dashboard",
+      "sourceRoot": "libs/admin/dashboard/src",
+      "prefix": "orgui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin/dashboard/tsconfig.lib.json",
+              "libs/admin/dashboard/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/admin/dashboard/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/admin/dashboard/jest.config.js",
+            "tsConfig": "libs/admin/dashboard/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/admin/dashboard/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "admin-products": {
+      "projectType": "library",
+      "root": "libs/admin/products",
+      "sourceRoot": "libs/admin/products/src",
+      "prefix": "orgui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin/products/tsconfig.lib.json",
+              "libs/admin/products/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/admin/products/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/admin/products/jest.config.js",
+            "tsConfig": "libs/admin/products/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/admin/products/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "common-ui-material": {
+      "projectType": "library",
+      "root": "libs/common/ui-material",
+      "sourceRoot": "libs/common/ui-material/src",
+      "prefix": "ui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common/ui-material/tsconfig.lib.json",
+              "libs/common/ui-material/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/common/ui-material/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/common/ui-material/jest.config.js",
+            "tsConfig": "libs/common/ui-material/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/common/ui-material/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }

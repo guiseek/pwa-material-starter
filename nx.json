@@ -25,6 +25,24 @@
     "webapp-e2e": {
       "tags": [],
       "implicitDependencies": ["webapp"]
+    },
+    "core-entities": {
+      "tags": ["core"]
+    },
+    "auth": {
+      "tags": ["shared"]
+    },
+    "shared-services": {
+      "tags": ["shared"]
+    },
+    "admin-dashboard": {
+      "tags": ["admin"]
+    },
+    "admin-products": {
+      "tags": []
+    },
+    "common-ui-material": {
+      "tags": []
     }
   }
 }
