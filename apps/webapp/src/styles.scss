@@ -19,7 +19,8 @@ $webapp-accent: mat-palette($mat-pink, A200, A100, A400);
 $webapp-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$webapp-theme: mat-light-theme($webapp-primary, $webapp-accent, $webapp-warn);
+// $webapp-theme: mat-light-theme($webapp-primary, $webapp-accent, $webapp-warn);
+$webapp-theme: mat-dark-theme($webapp-primary, $webapp-accent, $webapp-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

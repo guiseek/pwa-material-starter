@@ -1,8 +1,9 @@
+import { ProductService } from '@amd/shared/services';
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { merge, Observable, of as observableOf } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface ProductsItem {
@@ -44,7 +45,7 @@ export class ProductsDataSource extends DataSource<ProductsItem> {
   paginator: MatPaginator;
   sort: MatSort;
 
-  constructor() {
+  constructor(private service?: ProductService) {
     super();
   }
 
@@ -54,6 +55,8 @@ export class ProductsDataSource extends DataSource<ProductsItem> {
    * @returns A stream of the items to be rendered.
    */
   connect(): Observable<ProductsItem[]> {
+    console.log(this.service);
+
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [

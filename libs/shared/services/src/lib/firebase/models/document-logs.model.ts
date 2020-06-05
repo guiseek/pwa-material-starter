@@ -1,6 +1,8 @@
+export type Timestamp = Date | firebase.firestore.Timestamp;
+
 export interface DocumentLog {
-  timestamp: firebase.firestore.Timestamp;
-  accountId: firebase.firestore.Timestamp;
+  timestamp: Timestamp;
+  uid?: string;
 }
 export interface DocumentLogs {
   created: DocumentLog;

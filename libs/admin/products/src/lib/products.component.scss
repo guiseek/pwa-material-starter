@@ -1,3 +1,30 @@
-.full-width-table {
-  width: 100%;
+:host {
+  display: block;
+  height: 100%;
+
+  section {
+    flex: 1;
+    max-height: 100%;
+    overflow: hidden;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    .mat-card {
+      flex: 1;
+      margin: 6px;
+    }
+    .mat-card.table-card {
+      max-height: 100%;
+      overflow: auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      .table-container {
+        flex: 1;
+      }
+      table {
+        width: 100%;
+      }
+    }
+  }
 }

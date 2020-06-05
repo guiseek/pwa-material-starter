@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'webapp';
-  navLinks = [
-    { route: 'auth', label: 'Login' },
-    { route: '/', label: 'Dashboard' },
-    { route: 'products', label: 'Produtos' },
-  ];
 }

@@ -1,0 +1,27 @@
+<form fxLayout="column" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Produto</mat-label>
+    <input type="text" matInput formControlName="name">
+    <mat-error>Obrigatório</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descrição</mat-label>
+    <textarea
+      matInput
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      formControlName="description"
+      >
+    </textarea>
+    <mat-error>Máximo de 1000 caracteres</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Preço</mat-label>
+    <input type="number" matInput formControlName="price">
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <button mat-button>Salvar</button>
+</form>
