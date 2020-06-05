@@ -10,7 +10,7 @@
       },
       "root": "apps/webapp",
       "sourceRoot": "apps/webapp/src",
-      "prefix": "orgui",
+      "prefix": "amd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -155,7 +155,7 @@
       "projectType": "library",
       "root": "libs/auth",
       "sourceRoot": "libs/auth/src",
-      "prefix": "orgui",
+      "prefix": "amd",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -187,7 +187,7 @@
       "projectType": "library",
       "root": "libs/shared/services",
       "sourceRoot": "libs/shared/services/src",
-      "prefix": "orgui",
+      "prefix": "amd",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -215,7 +215,7 @@
       "projectType": "library",
       "root": "libs/admin/dashboard",
       "sourceRoot": "libs/admin/dashboard/src",
-      "prefix": "orgui",
+      "prefix": "amd",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -247,7 +247,7 @@
       "projectType": "library",
       "root": "libs/admin/products",
       "sourceRoot": "libs/admin/products/src",
-      "prefix": "orgui",
+      "prefix": "amd",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",

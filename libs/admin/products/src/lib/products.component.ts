@@ -5,7 +5,7 @@ import { MatTable } from '@angular/material/table';
 import { ProductsDataSource, ProductsItem } from './products-datasource';
 
 @Component({
-  selector: 'orgui-products',
+  selector: 'amd-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })

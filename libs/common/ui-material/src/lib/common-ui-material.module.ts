@@ -26,6 +26,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   exports: [
     LayoutModule,
+    MatPaginatorModule,
     MatCardModule,
     MatIconModule,
     MatListModule,

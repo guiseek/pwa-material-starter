@@ -1,8 +1,8 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "orgui", "camelCase"],
-    "component-selector": [true, "element", "orgui", "kebab-case"]
+    "directive-selector": [true, "attribute", "amd", "camelCase"],
+    "component-selector": [true, "element", "amd", "kebab-case"]
   },
   "linterOptions": {
     "exclude": ["!**/*"]

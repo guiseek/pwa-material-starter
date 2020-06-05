@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'orgui-root',
+  selector: 'amd-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

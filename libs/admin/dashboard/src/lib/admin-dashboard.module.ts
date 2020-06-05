@@ -1,10 +1,13 @@
+import { CommonUiMaterialModule } from '@amd/common/ui-material';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonUiMaterialModule } from '@orgui/common/ui-material';
 import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
+  declarations: [
+    DashboardComponent
+  ],
   imports: [
     CommonModule,
     CommonUiMaterialModule,

@@ -1,5 +1,5 @@
 {
-  "npmScope": "orgui",
+  "npmScope": "amd",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": {

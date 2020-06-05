@@ -18,19 +18,19 @@ import { AppComponent } from './app.component';
       {
         path: '',
         loadChildren: () =>
-          import('@orgui/admin/dashboard')
+          import('@amd/admin/dashboard')
             .then(m => m.AdminDashboardModule)
       },
       {
-        path: '',
+        path: 'products',
         loadChildren: () =>
-          import('@orgui/admin/products')
+          import('@amd/admin/products')
             .then(m => m.AdminProductsModule)
       },
       {
         path: 'auth',
         loadChildren: () =>
-          import('@orgui/auth')
+          import('@amd/auth')
             .then(m => m.AuthModule)
       }
     ])

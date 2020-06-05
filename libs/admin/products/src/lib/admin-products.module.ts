@@ -1,11 +1,14 @@
+import { CommonUiMaterialModule } from '@amd/common/ui-material';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonUiMaterialModule } from '@orgui/common/ui-material';
 import { ProductsComponent } from './products.component';
 
 
 @NgModule({
+  declarations: [
+    ProductsComponent
+  ],
   imports: [
     CommonModule,
     CommonUiMaterialModule,
