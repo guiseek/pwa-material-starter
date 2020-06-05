@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+
 
 
 @NgModule({
@@ -14,6 +19,10 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireAuthModule,
+    // AngularFirestoreModule,
+    // AngularFireStorageModule,
     RouterModule.forRoot([
       {
         path: '',

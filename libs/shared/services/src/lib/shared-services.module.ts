@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AuthService, FirestoreService } from './firebase';
+import { AuthGuard } from './guards';
 
 @NgModule({
-  imports: [CommonModule],
+  providers: [
+    AuthGuard,
+    AuthService,
+    FirestoreService
+  ]
 })
 export class SharedServicesModule {}
